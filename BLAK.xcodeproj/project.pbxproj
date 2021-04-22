@@ -14,6 +14,7 @@
 		48BB8E89263072E200048794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48BB8E88263072E200048794 /* Assets.xcassets */; };
 		48BB8E8C263072E200048794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BB8E8A263072E200048794 /* LaunchScreen.storyboard */; };
 		48BB8E9A2631B98D00048794 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB8E992631B98D00048794 /* LocationViewController.swift */; };
+		48BB8E9D2631D82100048794 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB8E9C2631D82100048794 /* AddLocationViewController.swift */; };
 		54D353D91AFF7F36CB7BE67B /* Pods_BLAK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD9B2BC23E7962CF6E64D16 /* Pods_BLAK.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		48BB8E8B263072E200048794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48BB8E8D263072E200048794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48BB8E992631B98D00048794 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		48BB8E9C2631D82100048794 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		6DA262C63BC792CD50893A9E /* Pods-BLAK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLAK.release.xcconfig"; path = "Target Support Files/Pods-BLAK/Pods-BLAK.release.xcconfig"; sourceTree = "<group>"; };
 		BA8D73B9960B571CD142119B /* Pods-BLAK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLAK.debug.xcconfig"; path = "Target Support Files/Pods-BLAK/Pods-BLAK.debug.xcconfig"; sourceTree = "<group>"; };
 		CCD9B2BC23E7962CF6E64D16 /* Pods_BLAK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLAK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				48BB8E81263072E200048794 /* SceneDelegate.swift */,
 				48BB8E83263072E200048794 /* ViewController.swift */,
 				48BB8E85263072E200048794 /* Main.storyboard */,
+				48BB8E9C2631D82100048794 /* AddLocationViewController.swift */,
 				48BB8E992631B98D00048794 /* LocationViewController.swift */,
 				48BB8E88263072E200048794 /* Assets.xcassets */,
 				48BB8E8A263072E200048794 /* LaunchScreen.storyboard */,
@@ -210,6 +213,7 @@
 			files = (
 				48BB8E84263072E200048794 /* ViewController.swift in Sources */,
 				48BB8E80263072E200048794 /* AppDelegate.swift in Sources */,
+				48BB8E9D2631D82100048794 /* AddLocationViewController.swift in Sources */,
 				48BB8E82263072E200048794 /* SceneDelegate.swift in Sources */,
 				48BB8E9A2631B98D00048794 /* LocationViewController.swift in Sources */,
 			);
