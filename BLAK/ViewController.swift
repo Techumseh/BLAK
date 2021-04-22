@@ -27,8 +27,7 @@ class ViewController: UIViewController {
                 if error != nil{
                     self.presentAlert(title: "Login Error", message:error!.localizedDescription)
                     print("Login error")                }
-                
-            }
+                self.performSegue(withIdentifier: "toLocationVC", sender: nil)            }
         }
         else {
             presentAlert(title: "Both Username and Password are required", message: "Both Username and Password are required")        }
@@ -50,7 +49,7 @@ class ViewController: UIViewController {
                 else
                 {
                     print("User Signup")
-                }
+                    self.performSegue(withIdentifier: "toLocationVC", sender: nil)                 }
             }
         }
             else {
