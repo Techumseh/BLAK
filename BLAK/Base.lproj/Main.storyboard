@@ -48,6 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ikJ-eL-zNo"/>
                     <connections>
                         <outlet property="passwordTxt" destination="zkg-Zh-KAr" id="bpm-ed-UbS"/>
                         <outlet property="usernameTxt" destination="bRe-KS-a9l" id="gby-nJ-dP4"/>
@@ -98,6 +99,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="CyE-A8-ORh" id="PZp-FO-wBg"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLoginVC" modalPresentationStyle="fullScreen" id="ABz-tD-PAS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjl-ib-Jn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

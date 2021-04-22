@@ -39,7 +39,7 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 print("error in login")
             }
             else {
-                
+                self.performSegue(withIdentifier: "toLoginVC", sender: nil)
             }
         }
     }
