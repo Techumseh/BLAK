@@ -19,17 +19,24 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var locationInsta: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
-  
     override func viewDidLoad() {
         super.viewDidLoad()
     imageView.isUserInteractionEnabled = true
     let gestureReco = UITapGestureRecognizer (target: self, action: #selector(openGallery))
+        imageView.addGestureRecognizer(gestureReco)
     
-
-       
     }
     @objc func openGallery(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        self.present(picker, animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      
         
+        imageView.image = info[.originalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
     }
     }
     
