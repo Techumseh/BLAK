@@ -31,6 +31,8 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         return cell 
         }
+    
+    
     func tableView(_tableview: UITableView, didSelectRowAt indexPath: IndexPath){
         performSegue(withIdentifier: "ToLocationDetailsVC", sender: nil)
         }

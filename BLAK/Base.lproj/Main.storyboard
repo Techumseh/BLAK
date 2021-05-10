@@ -110,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjl-ib-Jn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776.8115942028987" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1761" y="88"/>
         </scene>
         <!--Location Details View Controller-->
         <scene sceneID="RAV-eE-aZg">
@@ -225,6 +225,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="geE-6j-Hcz" id="iS3-05-wfY"/>
                         <outlet property="locationAddress" destination="fcG-JP-2v8" id="wFu-Nx-6QG"/>
                         <outlet property="locationInsta" destination="8JK-BK-3Oq" id="tdp-NO-jvy"/>
                         <outlet property="locationMP" destination="fzd-ff-CQs" id="az0-Zr-pcm"/>
