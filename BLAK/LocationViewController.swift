@@ -31,6 +31,14 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         return cell 
         }
+    func tableView(_tableview: UITableView, didSelectRowAt indexPath: IndexPath){
+        performSegue(withIdentifier: "ToLocationDetailsVC", sender: nil)
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
     
     @IBAction func logOutBTN(_ sender: Any) {
         PFUser.logOutInBackground{ (error) in

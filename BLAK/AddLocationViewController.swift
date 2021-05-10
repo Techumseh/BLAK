@@ -10,23 +10,23 @@ import MapKit
 
 class AddLocationViewController: UIViewController {
 
-   
+    @IBOutlet weak var locationMP: MKMapView!
+    @IBOutlet weak var locationName: UITextField!
+    @IBOutlet weak var locationOwner: UITextField!
+    @IBOutlet weak var locationNB: UITextField!
+    @IBOutlet weak var locationAddress: UITextField!
+    @IBOutlet weak var locationWebsite: UITextField!
+    @IBOutlet weak var locationInsta: UITextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
+    }
     }
     
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
