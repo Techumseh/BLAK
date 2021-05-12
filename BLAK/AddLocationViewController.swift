@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class AddLocationViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddLocationViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate{
 
     @IBOutlet weak var locationMP: MKMapView!
     @IBOutlet weak var locationName: UITextField!
@@ -18,6 +18,8 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var locationWebsite: UITextField!
     @IBOutlet weak var locationInsta: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    
+    let locationManager = CLLocationManager ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
