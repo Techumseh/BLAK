@@ -23,9 +23,19 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     imageView.isUserInteractionEnabled = true
     let gestureReco = UITapGestureRecognizer (target: self, action: #selector(openGallery))
         imageView.addGestureRecognizer(gestureReco)
+        
+        locationMP.delegate = self
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        
+        
     
     }
     @objc func openGallery(){
