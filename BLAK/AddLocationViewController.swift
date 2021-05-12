@@ -34,10 +34,12 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        
-        
-    
     }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.stopUpdatingLocation()
+        let location = CLLocationCoordinate2DMake(locations[0].coordinate.latitude, locations[0].coordinate.longitude)
+    }
+    
     @objc func openGallery(){
         let picker = UIImagePickerController()
         picker.delegate = self
