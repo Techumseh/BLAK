@@ -38,7 +38,15 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.stopUpdatingLocation()
         let location = CLLocationCoordinate2DMake(locations[0].coordinate.latitude, locations[0].coordinate.longitude)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.35, longitudeDelta: 0.35)
+        
+        let region = MKCoordinateRegion(center: location, span: span)
+        locationMP.setRegion(region, animated: true)
+        
+        
     }
+    
     
     @objc func openGallery(){
         let picker = UIImagePickerController()
