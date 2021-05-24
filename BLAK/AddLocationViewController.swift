@@ -34,7 +34,15 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+        //let reco = UILongPressGestureRecognizer(target: self, action: #selector(chooseLoc))
+        
     }
+    
+    @objc func chooseloc(){
+        
+    }
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.stopUpdatingLocation()
         let location = CLLocationCoordinate2DMake(locations[0].coordinate.latitude, locations[0].coordinate.longitude)
