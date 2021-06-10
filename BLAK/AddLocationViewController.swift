@@ -26,6 +26,7 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         
     imageView.isUserInteractionEnabled = true
     let gestureReco = UITapGestureRecognizer (target: self, action: #selector(openGallery))
+
         imageView.addGestureRecognizer(gestureReco)
         
         locationMP.delegate = self
