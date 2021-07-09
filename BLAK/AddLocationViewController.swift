@@ -20,6 +20,10 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var locationInsta: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    var lat:Double = 0.0
+    var long:Double = 0.0
+    
+    
     let locationManager = CLLocationManager ()
     
     override func viewDidLoad() {
@@ -43,7 +47,7 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
     }
     
     @IBAction func saveDataBTN(_ sender: Any) {
-        let locModel = LocationModel(id: UUID(), name: "", owner: "", neighborhood: "", address: "", website: "", instagram: "", lat: 0.0, long: 0.0)
+        let locModel = LocationModel(id: UUID(), name: locationName.text, owner: locationAddress.text, neighborhood: locationNB.text, address: locationAddress.text, website: locationWebsite.text, instagram: locationInsta.text, lat: lat, long: long, imageData: imageView.image)
         
         let obj = PFObject(className: "Location")
         obj["name"] = locModel.name
@@ -54,6 +58,13 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         obj["instagram"] = locModel.instagram
         obj["long"] = locModel.long
         obj["lat"] = locModel.lat
+        
+        if let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+        {
+            obj["img"] = imageData
+            
+        }
+        
     }
         
     @objc func chooseLoc(gestureReco:UIGestureRecognizer)
@@ -61,6 +72,10 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         if gestureReco.state == UIGestureRecognizer.State.began{
             let touches = gestureReco.location(in: self.locationMP)
             let coor = self.locationMP.convert(touches, toCoordinateFrom: self.locationMP)
+            
+            self.lat = coor.latitude
+            self.long = coor.longitude
+            
             
             let annotation = MKPointAnnotation()
             annotation.coordinate = coor

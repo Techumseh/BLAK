@@ -17,5 +17,6 @@ struct LocationModel {
     var instagram: String
     var lat:Double
     var long: Double
+    var imageData:UIimage 
     
 }
