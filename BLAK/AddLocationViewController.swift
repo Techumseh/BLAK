@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class AddLocationViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate{
 
@@ -35,11 +36,13 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        //let reco = UILongPressGestureRecognizer(target: self, action: #selector(chooseLoc))
+        let reco = UILongPressGestureRecognizer(target: self, action: #selector(chooseLoc))
+        reco.minimumPressDuration = 3
+       locationMP.addGestureRecognizer(reco)
         
     }
     
-    @objc func chooseloc(){
+    @objc func chooseLoc(){
         
     }
     
@@ -61,7 +64,7 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .photoLibrary
-        self.present(picker, animated: true, completion: nil)
+        self.present(picker,animated: true,completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       
