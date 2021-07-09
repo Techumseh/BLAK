@@ -42,6 +42,20 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         
     }
     
+    @IBAction func saveDataBTN(_ sender: Any) {
+        let locModel = LocationModel(id: UUID(), name: "", owner: "", neighborhood: "", address: "", website: "", instagram: "", lat: 0.0, long: 0.0)
+        
+        let obj = PFObject(className: "Location")
+        obj["name"] = locModel.name
+        obj["owner"] = locModel.owner
+        obj["neighborhood"] = locModel.neighborhood
+        obj["address"] = locModel.address
+        obj["website"] = locModel.website
+        obj["instagram"] = locModel.instagram
+        obj["long"] = locModel.long
+        obj["lat"] = locModel.lat
+    }
+        
     @objc func chooseLoc(gestureReco:UIGestureRecognizer)
     {
         if gestureReco.state == UIGestureRecognizer.State.began{

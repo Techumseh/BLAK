@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4897324A2698C50100DB9CD1 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489732492698C50100DB9CD1 /* LocationModel.swift */; };
 		48BB8E80263072E200048794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB8E7F263072E200048794 /* AppDelegate.swift */; };
 		48BB8E82263072E200048794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB8E81263072E200048794 /* SceneDelegate.swift */; };
 		48BB8E84263072E200048794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BB8E83263072E200048794 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		489732492698C50100DB9CD1 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		48BB8E7C263072E200048794 /* BLAK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLAK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BB8E7F263072E200048794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48BB8E81263072E200048794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				48BB8E88263072E200048794 /* Assets.xcassets */,
 				48BB8E8A263072E200048794 /* LaunchScreen.storyboard */,
 				48BB8E8D263072E200048794 /* Info.plist */,
+				489732492698C50100DB9CD1 /* LocationModel.swift */,
 			);
 			path = BLAK;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				48BB8E80263072E200048794 /* AppDelegate.swift in Sources */,
 				48BB8E9D2631D82100048794 /* AddLocationViewController.swift in Sources */,
 				48BB8E82263072E200048794 /* SceneDelegate.swift in Sources */,
+				4897324A2698C50100DB9CD1 /* LocationModel.swift in Sources */,
 				48BB8E9A2631B98D00048794 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

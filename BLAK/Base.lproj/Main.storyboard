@@ -233,6 +233,9 @@
                     <navigationItem key="navigationItem" id="F0k-ls-CSB">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="4rl-zV-cRa">
                             <color key="tintColor" systemColor="systemBlueColor"/>
+                            <connections>
+                                <action selector="saveDataBTN:" destination="a4o-Wq-3H8" id="r7t-wP-8n3"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
