@@ -42,8 +42,18 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         
     }
     
-    @objc func chooseLoc(){
-        
+    @objc func chooseLoc(gestureReco:UIGestureRecognizer)
+    {
+        if gestureReco.state == UIGestureRecognizer.State.began{
+            let touches = gestureReco.location(in: self.locationMP)
+            let coor = self.locationMP.convert(touches, toCoordinateFrom: self.locationMP)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coor
+            annotation.title = locationName.text
+            annotation.subtitle = locationAddress.text
+            self.locationMP.addAnnotation(annotation)
+        }
     }
     
     
@@ -51,9 +61,11 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         locationManager.stopUpdatingLocation()
         let location = CLLocationCoordinate2DMake(locations[0].coordinate.latitude, locations[0].coordinate.longitude)
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.35, longitudeDelta: 0.35)
+        let span = MKCoordinateSpan(latitudeDelta: 0.035, longitudeDelta: 0.035)
         
         let region = MKCoordinateRegion(center: location, span: span)
+        locationMP.setRegion(region, animated: true)
+        
         locationMP.setRegion(region, animated: true)
         
         
