@@ -13,8 +13,7 @@ class LocationDetailsViewController: UIViewController {
     @IBOutlet weak var locationMap: MKMapView!
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var locationType: UILabel!
-    
-    
+    @IBOutlet weak var imgView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

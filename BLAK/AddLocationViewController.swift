@@ -47,7 +47,8 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
     }
     
     @IBAction func saveDataBTN(_ sender: Any) {
-        let locModel = LocationModel(id: UUID(), name: locationName.text, owner: locationAddress.text, neighborhood: locationNB.text, address: locationAddress.text, website: locationWebsite.text, instagram: locationInsta.text, lat: lat, long: long, imageData: imageView.image)
+        let locModel = LocationModel(id: UUID(), name: locationName.text!, owner: locationAddress.text!, neighborhood: locationNB.text!, address: locationAddress.text!, website: locationWebsite.text!, instagram: locationInsta.text!, lat: lat, long: long, imageData: imageView.image!)
+        
         
         let obj = PFObject(className: "Location")
         obj["name"] = locModel.name
@@ -59,17 +60,16 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         obj["long"] = locModel.long
         obj["lat"] = locModel.lat
         
-        if let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+        if (imageView.image?.jpegData(compressionQuality: 0.5)) != nil
         {
-            obj["img"] = imageData
+            obj["img"] = imageView
             
         }
-        obj.saveInBackground {
-            (success, error) in
+        obj.saveInBackground { (success, error) in
             
             if error != nil
             {
-                print(error?.localizedDescription)
+                //print(error?.localizedDescription)
                 print ("Error in saving data")
             }
             else

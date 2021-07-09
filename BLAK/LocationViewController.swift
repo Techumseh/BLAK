@@ -10,6 +10,11 @@ import Parse
 
 class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
+    var locations:[LocationsModel]?
+    
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,6 +22,9 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        getDatafromParse()
+        
         
     }
     
@@ -36,6 +44,10 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_tableview: UITableView, didSelectRowAt indexPath: IndexPath){
         performSegue(withIdentifier: "ToLocationDetailsVC", sender: nil)
         }
+    
+    func getDatafromParse() {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

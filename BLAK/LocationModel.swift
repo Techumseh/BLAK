@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct LocationModel {
     var  id:UUID
@@ -17,6 +18,6 @@ struct LocationModel {
     var instagram: String
     var lat:Double
     var long: Double
-    var imageData:UIimage 
-    
+    var imageData: UIImage
+
 }
