@@ -64,6 +64,20 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
             obj["img"] = imageData
             
         }
+        obj.saveInBackground {
+            (success, error) in
+            
+            if error != nil
+            {
+                print(error?.localizedDescription)
+                print ("Error in saving data")
+            }
+            else
+            {
+                print ("Location Saved")
+                
+            }
+        }
         
     }
         
