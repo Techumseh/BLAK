@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct LocationModel {
-    var  id:UUID
+    var id:UUID
     var name:String
     var owner: String
     var neighborhood: String

@@ -8,13 +8,13 @@
 import UIKit
 import Parse
 @main
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let config = ParseClientConfiguration { (ParseMutableClientConfiguration)
+        let config = ParseClientConfiguration { ( ParseMutableClientConfiguration)
             in
             ParseMutableClientConfiguration.applicationId = "acOMYxaIYjsPkmJBMchOm60ofxhZQYIIQXa7VCIj"
             ParseMutableClientConfiguration.clientKey = "AgalvAOq6eENbzXBS12Iszhl1HoiT3FnNbmjDP32"

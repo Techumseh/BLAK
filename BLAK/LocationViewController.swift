@@ -10,7 +10,7 @@ import Parse
 
 class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
-    var locations:[LocationsModel]?
+    var locations:[LocationModel]?
     
     
     
