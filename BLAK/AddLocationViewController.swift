@@ -60,11 +60,12 @@ class AddLocationViewController: UIViewController,UIImagePickerControllerDelegat
         obj["long"] = locModel.long
         obj["lat"] = locModel.lat
         
-        if (imageView.image?.jpegData(compressionQuality: 0.5)) != nil
+        if let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
         {
-            obj["img"] = imageView
+            obj["img"] = imageData 
             
         }
+    
         obj.saveInBackground { (success, error) in
             
             if error != nil
