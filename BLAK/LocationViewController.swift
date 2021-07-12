@@ -10,10 +10,8 @@ import Parse
 
 class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
-    var locations:[LocationModel]?
-    
-    
-    
+    var locations:[String] = []
+    var locationID:[String] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,13 +27,13 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return locations.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Cell"
+        cell.textLabel?.text = locations[indexPath.row]
         
         return cell 
         }
@@ -45,8 +43,31 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
         performSegue(withIdentifier: "ToLocationDetailsVC", sender: nil)
         }
     
-    func getDatafromParse() {
-        
+    func getDatafromParse()
+    {
+        let query = PFQuery(className: "Location")
+        query.findObjectsInBackground{(objects, error) in
+            if error != nil{
+                self.presentAlert(title:"Error in fetching data", message: error!.localizedDescription)
+                print("error in fetching data")
+            }
+            else
+            {
+                //self.locations?.removeAll()
+                
+                for object in objects!
+                {
+                    if let name = object.object(forKey: "name") as? String{
+                        if let placeID = object.objectId as? String{
+                            self.locations.append(name)
+                            self.locationID.append(placeID)
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+            }
+            
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
