@@ -7,29 +7,23 @@
 
 import UIKit
 import MapKit
+import Parse
 
-class LocationDetailsViewController: UIViewController {
+class LocationDetailsViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var locationMap: MKMapView!
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var locationType: UILabel!
     @IBOutlet weak var imgView: UIImageView!
     
+    var selectionLocation:LocationModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

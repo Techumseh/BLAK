@@ -10,8 +10,10 @@ import Parse
 
 class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
-    var locations:[String] = []
-    var locationID:[String] = []
+//    var locations:[String] = []
+//    var locationID:[String] = []
+    
+    var allLocation:[LocationModel] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,13 +29,13 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locations.count
+        return allLocation.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = locations[indexPath.row]
+        cell.textLabel?.text = allLocation[indexPath.row].name
         
         return cell 
         }
@@ -59,8 +61,8 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 {
                     if let name = object.object(forKey: "name") as? String{
                         if let placeID = object.objectId as? String{
-                            self.locations.append(name)
-                            self.locationID.append(placeID)
+                         
+                            
                         }
                     }
                 }

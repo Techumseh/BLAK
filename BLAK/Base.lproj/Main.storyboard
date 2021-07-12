@@ -137,21 +137,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QvJ-dX-Ink">
-                                <rect key="frame" x="0.0" y="122" width="414" height="230"/>
-                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-oc-rpH">
-                                <rect key="frame" x="150" y="438" width="114.5" height="21"/>
+                                <rect key="frame" x="150" y="395" width="114.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9B-Lz-65S">
-                                <rect key="frame" x="118" y="486" width="178" height="21"/>
+                                <rect key="frame" x="118" y="431" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je6-Hb-eOB">
+                                <rect key="frame" x="-20" y="155" width="434" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QvJ-dX-Ink">
+                                <rect key="frame" x="0.0" y="498" width="414" height="230"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cOm-5c-VlZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -171,6 +175,7 @@
                     <navigationItem key="navigationItem" id="nbS-TY-qnO"/>
                     <connections>
                         <outlet property="MapView" destination="QvJ-dX-Ink" id="Tg4-cX-Vnr"/>
+                        <outlet property="imgView" destination="je6-Hb-eOB" id="HKo-Vr-FjK"/>
                         <outlet property="locationMap" destination="QvJ-dX-Ink" id="FUe-nI-CSG"/>
                         <outlet property="locationName" destination="Q9B-Lz-65S" id="jJZ-uS-dmC"/>
                         <outlet property="locationType" destination="Q9B-Lz-65S" id="Pas-UA-9NH"/>
