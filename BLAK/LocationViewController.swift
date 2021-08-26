@@ -10,8 +10,9 @@ import Parse
 
 class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
-//    var locations:[String] = []
-//    var locationID:[String] = []
+    var locations:[String] = []
+
+    var locationID:[String] = []
     
     var allLocation:[LocationModel] = []
     
@@ -37,7 +38,7 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let cell = UITableViewCell()
         cell.textLabel?.text = allLocation[indexPath.row].name
         
-        return cell 
+        return cell
         }
     
     
@@ -48,7 +49,7 @@ class LocationViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func getDatafromParse()
     {
         let query = PFQuery(className: "Location")
-        query.findObjectsInBackground{(objects, error) in
+        query.findObjectsInBackground{ (objects, error) in
             if error != nil{
                 self.presentAlert(title:"Error in fetching data", message: error!.localizedDescription)
                 print("error in fetching data")
